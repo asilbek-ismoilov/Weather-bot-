@@ -12,4 +12,4 @@ async def start_command(message:Message):
         db.add_user(full_name=full_name,telegram_id=telegram_id) #foydalanuvchi bazaga qo'shildi
         await message.answer(text="Assalomu alaykum, Ob-Havo botimizga hush kelibsiz", reply_markup=obh_button)
     except:
-        await message.answer(text="Assalomu alaykum", reply_markup=weather_inl_button)
+        await message.answer(text="Assalomu alaykum", reply_markup=obh_button)

@@ -16,7 +16,7 @@ async def get_weather_command(message: Message,state:FSMContext):
 # @dp.message(ObHavo.havo)
 # async def send_weather(message: Message, state:FSMContext):
 #     city = message.text
-#     weather = get_weather(city)
+#     weather = get_weather(city) 
     
 #     Vaqt = weather.get("Vaqt", "Noma'lum")
 #     Harorat = weather.get("Harorat", "Noma'lum")
@@ -28,21 +28,21 @@ async def get_weather_command(message: Message,state:FSMContext):
 #     await message.answer(javob)
 # 𝑶𝒃-𝒉𝒂𝒗𝒐 𝒎𝒂'𝒍𝒖𝒎𝒐𝒕𝒍𝒂𝒓𝒊
 
-# ташкент
+# ташкент Toshkent
 @dp.callback_query(F.data=="ташкент", ObHavo.havo)
 async def Toshkent(callback:CallbackQuery):
     await callback.answer("Toshkent")
 
     city = callback.message.text
-    weather = get_weather(city)
-    
+    weather = get_weather("ташкент")
+
     Vaqt = weather.get("Vaqt", "Noma'lum")
     Harorat = weather.get("Harorat", "Noma'lum")
     Bosim = weather.get("Bosim", "Noma'lum")
     Namlik = weather.get("Namlik", "Noma'lum")
     Shamol = weather.get("Shamol", "Noma'lum")
 
-    javob = (f"⛅️ 𝗢𝗯-𝗵𝗮𝘃𝗼 𝗺𝗮'𝗹𝘂𝗺𝗼𝘁𝗹𝗮𝗿𝗶:\n\n⏰ Vaqt : {Vaqt}\n\n🌡 Harorat : {Harorat}\n\n🌬 Bosim : {Bosim}\n\n💧 Namlik : {Namlik}\n\n💨 Shamol: {Shamol}")
+    javob = (f"⛅️ 𝗢𝗯-𝗵𝗮𝘃𝗼 𝗺𝗮'𝗹𝘂𝗺𝗼𝘁𝗹𝗮𝗿𝗶: Toshkent\n\n⏰ Vaqt : {Vaqt}\n\n🌡 Harorat : {Harorat}\n\n🌬 Bosim : {Bosim}\n\n💧 Namlik : {Namlik}\n\n💨 Shamol: {Shamol}")
     
     await callback.message.answer(text=javob,reply_markup=weather_inl_button)
     await callback.message.delete()
@@ -53,7 +53,7 @@ async def Buxoro(callback:CallbackQuery):
     await callback.answer("Buxoro")
 
     city = callback.message.text
-    weather = get_weather(city)
+    weather = get_weather("бухара")
     
     Vaqt = weather.get("Vaqt", "Noma'lum")
     Harorat = weather.get("Harorat", "Noma'lum")
@@ -61,7 +61,7 @@ async def Buxoro(callback:CallbackQuery):
     Namlik = weather.get("Namlik", "Noma'lum")
     Shamol = weather.get("Shamol", "Noma'lum")
 
-    javob = (f"⛅️ 𝗢𝗯-𝗵𝗮𝘃𝗼 𝗺𝗮'𝗹𝘂𝗺𝗼𝘁𝗹𝗮𝗿𝗶:\n\n⏰ Vaqt : {Vaqt}\n\n🌡 Harorat : {Harorat}\n\n🌬 Bosim : {Bosim}\n\n💧 Namlik : {Namlik}\n\n💨 Shamol: {Shamol}")
+    javob = (f"⛅️ 𝗢𝗯-𝗵𝗮𝘃𝗼 𝗺𝗮'𝗹𝘂𝗺𝗼𝘁𝗹𝗮𝗿𝗶: Buxoro\n\n⏰ Vaqt : {Vaqt}\n\n🌡 Harorat : {Harorat}\n\n🌬 Bosim : {Bosim}\n\n💧 Namlik : {Namlik}\n\n💨 Shamol: {Shamol}")
     
     await callback.message.answer(text=javob,reply_markup=weather_inl_button)
     await callback.message.delete()
@@ -71,7 +71,7 @@ async def Navoiy(callback:CallbackQuery):
     await callback.answer("Navoiy")
 
     city = callback.message.text
-    weather = get_weather(city)
+    weather = get_weather("навои")
     
     Vaqt = weather.get("Vaqt", "Noma'lum")
     Harorat = weather.get("Harorat", "Noma'lum")
@@ -79,7 +79,7 @@ async def Navoiy(callback:CallbackQuery):
     Namlik = weather.get("Namlik", "Noma'lum")
     Shamol = weather.get("Shamol", "Noma'lum")
 
-    javob = (f"⛅️ 𝗢𝗯-𝗵𝗮𝘃𝗼 𝗺𝗮'𝗹𝘂𝗺𝗼𝘁𝗹𝗮𝗿𝗶:\n\n⏰ Vaqt : {Vaqt}\n\n🌡 Harorat : {Harorat}\n\n🌬 Bosim : {Bosim}\n\n💧 Namlik : {Namlik}\n\n💨 Shamol: {Shamol}")
+    javob = (f"⛅️ 𝗢𝗯-𝗵𝗮𝘃𝗼 𝗺𝗮'𝗹𝘂𝗺𝗼𝘁𝗹𝗮𝗿𝗶: Navoiy\n\n⏰ Vaqt : {Vaqt}\n\n🌡 Harorat : {Harorat}\n\n🌬 Bosim : {Bosim}\n\n💧 Namlik : {Namlik}\n\n💨 Shamol: {Shamol}")
     
     await callback.message.answer(text=javob,reply_markup=weather_inl_button)
     await callback.message.delete()
@@ -90,7 +90,7 @@ async def Sirdaryo(callback:CallbackQuery):
     await callback.answer("Sirdaryo")
 
     city = callback.message.text
-    weather = get_weather(city)
+    weather = get_weather("сырдарья")
     
     Vaqt = weather.get("Vaqt", "Noma'lum")
     Harorat = weather.get("Harorat", "Noma'lum")
@@ -98,7 +98,7 @@ async def Sirdaryo(callback:CallbackQuery):
     Namlik = weather.get("Namlik", "Noma'lum")
     Shamol = weather.get("Shamol", "Noma'lum")
 
-    javob = (f"⛅️ 𝗢𝗯-𝗵𝗮𝘃𝗼 𝗺𝗮'𝗹𝘂𝗺𝗼𝘁𝗹𝗮𝗿𝗶:\n\n⏰ Vaqt : {Vaqt}\n\n🌡 Harorat : {Harorat}\n\n🌬 Bosim : {Bosim}\n\n💧 Namlik : {Namlik}\n\n💨 Shamol: {Shamol}")
+    javob = (f"⛅️ 𝗢𝗯-𝗵𝗮𝘃𝗼 𝗺𝗮'𝗹𝘂𝗺𝗼𝘁𝗹𝗮𝗿𝗶: Sirdaryo\n\n⏰ Vaqt : {Vaqt}\n\n🌡 Harorat : {Harorat}\n\n🌬 Bosim : {Bosim}\n\n💧 Namlik : {Namlik}\n\n💨 Shamol: {Shamol}")
     
     await callback.message.answer(text=javob,reply_markup=weather_inl_button)
     await callback.message.delete()
@@ -109,7 +109,7 @@ async def Samarqand(callback:CallbackQuery):
     await callback.answer("Samarqand")
 
     city = callback.message.text
-    weather = get_weather(city)
+    weather = get_weather("самарканд")
     
     Vaqt = weather.get("Vaqt", "Noma'lum")
     Harorat = weather.get("Harorat", "Noma'lum")
@@ -117,7 +117,7 @@ async def Samarqand(callback:CallbackQuery):
     Namlik = weather.get("Namlik", "Noma'lum")
     Shamol = weather.get("Shamol", "Noma'lum")
 
-    javob = (f"⛅️ 𝗢𝗯-𝗵𝗮𝘃𝗼 𝗺𝗮'𝗹𝘂𝗺𝗼𝘁𝗹𝗮𝗿𝗶:\n\n⏰ Vaqt : {Vaqt}\n\n🌡 Harorat : {Harorat}\n\n🌬 Bosim : {Bosim}\n\n💧 Namlik : {Namlik}\n\n💨 Shamol: {Shamol}")
+    javob = (f"⛅️ 𝗢𝗯-𝗵𝗮𝘃𝗼 𝗺𝗮'𝗹𝘂𝗺𝗼𝘁𝗹𝗮𝗿𝗶: Samarqand\n\n⏰ Vaqt : {Vaqt}\n\n🌡 Harorat : {Harorat}\n\n🌬 Bosim : {Bosim}\n\n💧 Namlik : {Namlik}\n\n💨 Shamol: {Shamol}")
     
     await callback.message.answer(text=javob,reply_markup=weather_inl_button)
     await callback.message.delete()
@@ -128,7 +128,7 @@ async def Fargona(callback:CallbackQuery):
     await callback.answer("Farg'ona")
 
     city = callback.message.text
-    weather = get_weather(city)
+    weather = get_weather("фергана")
     
     Vaqt = weather.get("Vaqt", "Noma'lum")
     Harorat = weather.get("Harorat", "Noma'lum")
@@ -136,7 +136,7 @@ async def Fargona(callback:CallbackQuery):
     Namlik = weather.get("Namlik", "Noma'lum")
     Shamol = weather.get("Shamol", "Noma'lum")
 
-    javob = (f"⛅️ 𝗢𝗯-𝗵𝗮𝘃𝗼 𝗺𝗮'𝗹𝘂𝗺𝗼𝘁𝗹𝗮𝗿𝗶:\n\n⏰ Vaqt : {Vaqt}\n\n🌡 Harorat : {Harorat}\n\n🌬 Bosim : {Bosim}\n\n💧 Namlik : {Namlik}\n\n💨 Shamol: {Shamol}")
+    javob = (f"⛅️ 𝗢𝗯-𝗵𝗮𝘃𝗼 𝗺𝗮'𝗹𝘂𝗺𝗼𝘁𝗹𝗮𝗿𝗶: Farg'ona\n\n⏰ Vaqt : {Vaqt}\n\n🌡 Harorat : {Harorat}\n\n🌬 Bosim : {Bosim}\n\n💧 Namlik : {Namlik}\n\n💨 Shamol: {Shamol}")
     
     await callback.message.answer(text=javob,reply_markup=weather_inl_button)
     await callback.message.delete()
@@ -147,7 +147,7 @@ async def Namangan(callback:CallbackQuery):
     await callback.answer("Namangan")
 
     city = callback.message.text
-    weather = get_weather(city)
+    weather = get_weather("наманган")
     
     Vaqt = weather.get("Vaqt", "Noma'lum")
     Harorat = weather.get("Harorat", "Noma'lum")
@@ -155,18 +155,18 @@ async def Namangan(callback:CallbackQuery):
     Namlik = weather.get("Namlik", "Noma'lum")
     Shamol = weather.get("Shamol", "Noma'lum")
 
-    javob = (f"⛅️ 𝗢𝗯-𝗵𝗮𝘃𝗼 𝗺𝗮'𝗹𝘂𝗺𝗼𝘁𝗹𝗮𝗿𝗶:\n\n⏰ Vaqt : {Vaqt}\n\n🌡 Harorat : {Harorat}\n\n🌬 Bosim : {Bosim}\n\n💧 Namlik : {Namlik}\n\n💨 Shamol: {Shamol}")
+    javob = (f"⛅️ 𝗢𝗯-𝗵𝗮𝘃𝗼 𝗺𝗮'𝗹𝘂𝗺𝗼𝘁𝗹𝗮𝗿𝗶: Namangan\n\n⏰ Vaqt : {Vaqt}\n\n🌡 Harorat : {Harorat}\n\n🌬 Bosim : {Bosim}\n\n💧 Namlik : {Namlik}\n\n💨 Shamol: {Shamol}")
     
     await callback.message.answer(text=javob,reply_markup=weather_inl_button)
     await callback.message.delete()
 
 # андижан Andijon
 @dp.callback_query(F.data=="андижан", ObHavo.havo)
-async def Namangan(callback:CallbackQuery):
-    await callback.answer("Namangan")
+async def Andijon(callback:CallbackQuery):
+    await callback.answer("Andijon")
 
     city = callback.message.text
-    weather = get_weather(city)
+    weather = get_weather("андижан")
     
     Vaqt = weather.get("Vaqt", "Noma'lum")
     Harorat = weather.get("Harorat", "Noma'lum")
@@ -174,7 +174,7 @@ async def Namangan(callback:CallbackQuery):
     Namlik = weather.get("Namlik", "Noma'lum")
     Shamol = weather.get("Shamol", "Noma'lum")
 
-    javob = (f"⛅️ 𝗢𝗯-𝗵𝗮𝘃𝗼 𝗺𝗮'𝗹𝘂𝗺𝗼𝘁𝗹𝗮𝗿𝗶:\n\n⏰ Vaqt : {Vaqt}\n\n🌡 Harorat : {Harorat}\n\n🌬 Bosim : {Bosim}\n\n💧 Namlik : {Namlik}\n\n💨 Shamol: {Shamol}")
+    javob = (f"⛅️ 𝗢𝗯-𝗵𝗮𝘃𝗼 𝗺𝗮'𝗹𝘂𝗺𝗼𝘁𝗹𝗮𝗿𝗶: Andijon\n\n⏰ Vaqt : {Vaqt}\n\n🌡 Harorat : {Harorat}\n\n🌬 Bosim : {Bosim}\n\n💧 Namlik : {Namlik}\n\n💨 Shamol: {Shamol}")
     
     await callback.message.answer(text=javob,reply_markup=weather_inl_button)
     await callback.message.delete()
@@ -185,7 +185,7 @@ async def Jizzah(callback:CallbackQuery):
     await callback.answer("Jizzah")
 
     city = callback.message.text
-    weather = get_weather(city)
+    weather = get_weather("джизак")
     
     Vaqt = weather.get("Vaqt", "Noma'lum")
     Harorat = weather.get("Harorat", "Noma'lum")
@@ -193,7 +193,7 @@ async def Jizzah(callback:CallbackQuery):
     Namlik = weather.get("Namlik", "Noma'lum")
     Shamol = weather.get("Shamol", "Noma'lum")
 
-    javob = (f"⛅️ 𝗢𝗯-𝗵𝗮𝘃𝗼 𝗺𝗮'𝗹𝘂𝗺𝗼𝘁𝗹𝗮𝗿𝗶:\n\n⏰ Vaqt : {Vaqt}\n\n🌡 Harorat : {Harorat}\n\n🌬 Bosim : {Bosim}\n\n💧 Namlik : {Namlik}\n\n💨 Shamol: {Shamol}")
+    javob = (f"⛅️ 𝗢𝗯-𝗵𝗮𝘃𝗼 𝗺𝗮'𝗹𝘂𝗺𝗼𝘁𝗹𝗮𝗿𝗶: Jizzah\n\n⏰ Vaqt : {Vaqt}\n\n🌡 Harorat : {Harorat}\n\n🌬 Bosim : {Bosim}\n\n💧 Namlik : {Namlik}\n\n💨 Shamol: {Shamol}")
     
     await callback.message.answer(text=javob,reply_markup=weather_inl_button)
     await callback.message.delete()
@@ -204,7 +204,7 @@ async def Urganch(callback:CallbackQuery):
     await callback.answer("Urganch")
 
     city = callback.message.text
-    weather = get_weather(city)
+    weather = get_weather("ургенч")
     
     Vaqt = weather.get("Vaqt", "Noma'lum")
     Harorat = weather.get("Harorat", "Noma'lum")
@@ -212,7 +212,7 @@ async def Urganch(callback:CallbackQuery):
     Namlik = weather.get("Namlik", "Noma'lum")
     Shamol = weather.get("Shamol", "Noma'lum")
 
-    javob = (f"⛅️ 𝗢𝗯-𝗵𝗮𝘃𝗼 𝗺𝗮'𝗹𝘂𝗺𝗼𝘁𝗹𝗮𝗿𝗶:\n\n⏰ Vaqt : {Vaqt}\n\n🌡 Harorat : {Harorat}\n\n🌬 Bosim : {Bosim}\n\n💧 Namlik : {Namlik}\n\n💨 Shamol: {Shamol}")
+    javob = (f"⛅️ 𝗢𝗯-𝗵𝗮𝘃𝗼 𝗺𝗮'𝗹𝘂𝗺𝗼𝘁𝗹𝗮𝗿𝗶: Urganch\n\n⏰ Vaqt : {Vaqt}\n\n🌡 Harorat : {Harorat}\n\n🌬 Bosim : {Bosim}\n\n💧 Namlik : {Namlik}\n\n💨 Shamol: {Shamol}")
     
     await callback.message.answer(text=javob,reply_markup=weather_inl_button)
     await callback.message.delete()
@@ -223,7 +223,7 @@ async def Nukus(callback:CallbackQuery):
     await callback.answer("Nukus")
 
     city = callback.message.text
-    weather = get_weather(city)
+    weather = get_weather("нукус")
     
     Vaqt = weather.get("Vaqt", "Noma'lum")
     Harorat = weather.get("Harorat", "Noma'lum")
@@ -231,7 +231,7 @@ async def Nukus(callback:CallbackQuery):
     Namlik = weather.get("Namlik", "Noma'lum")
     Shamol = weather.get("Shamol", "Noma'lum")
 
-    javob = (f"⛅️ 𝗢𝗯-𝗵𝗮𝘃𝗼 𝗺𝗮'𝗹𝘂𝗺𝗼𝘁𝗹𝗮𝗿𝗶:\n\n⏰ Vaqt : {Vaqt}\n\n🌡 Harorat : {Harorat}\n\n🌬 Bosim : {Bosim}\n\n💧 Namlik : {Namlik}\n\n💨 Shamol: {Shamol}")
+    javob = (f"⛅️ 𝗢𝗯-𝗵𝗮𝘃𝗼 𝗺𝗮'𝗹𝘂𝗺𝗼𝘁𝗹𝗮𝗿𝗶: Nukus\n\n⏰ Vaqt : {Vaqt}\n\n🌡 Harorat : {Harorat}\n\n🌬 Bosim : {Bosim}\n\n💧 Namlik : {Namlik}\n\n💨 Shamol: {Shamol}")
     
     await callback.message.answer(text=javob,reply_markup=weather_inl_button)
     await callback.message.delete()
@@ -242,7 +242,7 @@ async def Termiz(callback:CallbackQuery):
     await callback.answer("Termiz")
 
     city = callback.message.text
-    weather = get_weather(city)
+    weather = get_weather("термез")
     
     Vaqt = weather.get("Vaqt", "Noma'lum")
     Harorat = weather.get("Harorat", "Noma'lum")
@@ -250,7 +250,7 @@ async def Termiz(callback:CallbackQuery):
     Namlik = weather.get("Namlik", "Noma'lum")
     Shamol = weather.get("Shamol", "Noma'lum")
 
-    javob = (f"⛅️ 𝗢𝗯-𝗵𝗮𝘃𝗼 𝗺𝗮'𝗹𝘂𝗺𝗼𝘁𝗹𝗮𝗿𝗶:\n\n⏰ Vaqt : {Vaqt}\n\n🌡 Harorat : {Harorat}\n\n🌬 Bosim : {Bosim}\n\n💧 Namlik : {Namlik}\n\n💨 Shamol: {Shamol}")
+    javob = (f"⛅️ 𝗢𝗯-𝗵𝗮𝘃𝗼 𝗺𝗮'𝗹𝘂𝗺𝗼𝘁𝗹𝗮𝗿𝗶: Termiz\n\n⏰ Vaqt : {Vaqt}\n\n🌡 Harorat : {Harorat}\n\n🌬 Bosim : {Bosim}\n\n💧 Namlik : {Namlik}\n\n💨 Shamol: {Shamol}")
     
     await callback.message.answer(text=javob,reply_markup=weather_inl_button)
     await callback.message.delete()

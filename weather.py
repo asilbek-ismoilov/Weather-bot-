@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup as bs
 import requests
-import requests
+
 
 def get_weather(shaxar):
     url = f"https://sinoptik.ua/погода-{shaxar}"
